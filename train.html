@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart ETA | Train Details</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            🚆
+        </div>
+
+        <div>
+            <h2>SMART ETA</h2>
+            <p>Smarter Journeys. On Time.</p>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="train.html" class="active">Live Trains</a>
+        <a href="train.html">ETA Forecast</a>
+        <a href="#details">About</a>
+
+    </nav>
+
+
+    <div class="profile">
+        👤
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN DASHBOARD ================= -->
+
+<main class="dashboard">
+
+    <a href="index.html" class="back-button">
+        ← Back to Home
+    </a>
+
+
+    <!-- ================= TRAIN HEADER ================= -->
+
+    <section class="train-header">
+
+        <div class="train-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=800&q=80"
+                alt="Passenger train"
+            >
+
+        </div>
+
+
+        <div class="train-heading">
+
+            <h1 id="trainName">
+                12727 – Godavari Express
+            </h1>
+
+            <p id="trainRoute">
+                Visakhapatnam  (VSKP)
+                →
+                Hyderabad Deccan (HYB)
+            </p>
+
+            <div class="status-line">
+
+                <span id="statusBadge" class="status-badge ontime">
+                    ● Delayed
+                </span>
+
+                <span id="statusText">
+                    Running behind scheduled
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-metrics">
+
+            <div>
+
+                <span>Predicted Arrival</span>
+
+                <strong id="eta">
+                    19:20
+                </strong>
+
+                <small>
+                    Today
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span>Current Delay</span>
+
+                <strong id="delay">
+                    18 mins
+                </strong>
+
+                <small>
+                    Moderate delay
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span>Prediction Confidence</span>
+
+                <div class="confidence">
+                    <span>89%</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DASHBOARD GRID ================= -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- LIVE STATUS -->
+
+        <div class="panel">
+
+            <h2>📍 Live Status</h2>
+
+            <div class="info-row">
+
+                <span>Current Location</span>
+
+                <strong id="location">
+                    Near Rajahmundry
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Last Updated</span>
+
+                <strong id="updated">
+                    Just now
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Current Speed</span>
+
+                <strong id="speed">
+                    64 km/h
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Average Speed</span>
+
+                <strong>
+                    61 km/h
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Distance Remaining</span>
+
+                <strong>
+                    420 km
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Estimated Arrival</span>
+
+                <strong class="green-text" id="liveEta">
+                    19:39
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= ROUTE GRAPH ================= -->
+
+        <div class="panel route-panel">
+
+            <div class="panel-title">
+
+                <h2>🛤️ Route Progress</h2>
+
+                <div class="legend">
+
+                    <span>
+                        <i class="legend-complete"></i>
+                        Completed
+                    </span>
+
+                    <span>
+                        <i class="legend-current"></i>
+                        Current
+                    </span>
+
+                    <span>
+                        <i class="legend-upcoming"></i>
+                        Upcoming
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="route">
+
+                <div class="route-progress"></div>
+
+
+                <!-- Chennai -->
+
+                <div class="route-stop stop-1 completed">
+
+                    <div class="stop-dot">✓</div>
+
+                    <p>
+                        Visakhapatnam
+                    </p>
+
+                    <small>
+                        VSKP
+                    </small>
+
+                    <small>
+                        16:00
+                    </small>
+
+                </div>
+
+
+                <!-- Renigunta -->
+
+                <div class="route-stop stop-2 completed">
+
+                    <div class="stop-dot">✓</div>
+
+                    <p>
+                        Anakapalle
+                    </p>
+
+                    <small>
+                        AK
+                    </small>
+
+                    <small>
+                        16:38
+                    </small>
+
+                </div>
+
+
+                <!-- Nellore -->
+
+                <div class="route-stop stop-3 completed">
+
+                    <div class="stop-dot">✓</div>
+
+                    <p>
+                        Tuni
+                    </p>
+
+                    <small>
+                        ONE
+                    </small>
+
+                    <small>
+                        17:30
+                    </small>
+
+                </div>
+
+
+                <!-- Ongole -->
+
+                <div class="route-stop stop-4 completed">
+
+                    <div class="stop-dot">✓</div>
+
+                    <p>
+                        Rajahmundry
+                    </p>
+
+                    <small>
+                        CURRENT
+                    </small>
+
+
+                </div>
+
+
+                <!-- Vijayawada -->
+
+                <div class="route-stop stop-5 current">
+
+                    <div class="train-marker">
+                        🚆
+                    </div>
+
+                    <div class="stop-dot"></div>
+
+                    <p>
+                        Vijayawada
+                    </p>
+
+                    <small>
+                        BZA
+                    </small>
+
+                    <small class="blue-text">
+                        20:05
+                    </small>
+
+                </div>
+
+
+                <!-- Warangal -->
+
+                <div class="route-stop stop-6 upcoming">
+
+                    <div class="stop-dot"></div>
+
+                    <p>
+                        Warangal
+                    </p>
+
+                    <small>
+                        WGL
+                    </small>
+
+                    <small>
+                        23:20
+                    </small>
+
+                </div>
+
+
+                <!-- Hyderabad -->
+
+                <div class="route-stop stop-7 upcoming">
+
+                    <div class="stop-dot"></div>
+
+                    <p>
+                        Hyderabad
+                    </p>
+
+                    <small>
+                        HYB
+                    </small>
+
+                    <small>
+                        05:45
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="route-statistics">
+
+                <div>
+                    <strong>742 km</strong>
+                    <span>Total Distance</span>
+                </div>
+
+                <div>
+                    <strong>320 km</strong>
+                    <span>Completed</span>
+                </div>
+
+                <div>
+                    <strong>45 km</strong>
+                    <span>To Next Station</span>
+                </div>
+
+                <div>
+                    <strong>420 km</strong>
+                    <span>Remaining</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= NEXT STATION ================= -->
+
+        <div class="panel next-station">
+
+            <h2>🚉 Next Station</h2>
+
+            <h3 id="nextStation">
+                Vijayawada Junction
+            </h3>
+
+            <p class="station-code">
+                BZA
+            </p>
+
+
+            <div class="next-grid">
+
+                <div>
+                    <span>ETA</span>
+                    <strong>20:05</strong>
+                </div>
+
+                <div>
+                    <span>Arrival In</span>
+                    <strong>45 mins</strong>
+                </div>
+
+                <div>
+                    <span>Distance</span>
+                    <strong>46 km</strong>
+                </div>
+
+                <div>
+                    <span>Platform</span>
+                    <strong>3</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stop-time">
+                ⏱ Stops for 5 minutes
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= LIVE MAP ================= -->
+
+        <div class="panel map-panel">
+
+            <h2>🗺️ Live Train Location</h2>
+
+            <div class="map">
+
+                <div class="map-road road-1"></div>
+                <div class="map-road road-2"></div>
+
+                <div class="map-city city-1">
+                    Visakhapatnam
+                </div>
+
+                <div class="map-city city-2">
+                    Anakapalle
+                </div>
+
+                <div class="map-city city-3">
+                    Tuni
+                </div>
+
+                <div class="map-city city-4">
+                    Rajahmundry
+                </div>
+
+                <div class="map-city city-5">
+                    Vijayawada
+                </div>
+
+                <div class="map-train">
+                    🚆
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= AI DELAY ================= -->
+
+        <div class="panel delay-panel">
+
+            <h2>🤖 AI Delay Prediction</h2>
+
+
+            <div class="delay-display">
+
+                <div class="delay-gauge">
+
+                    <div class="gauge-inner">
+                        <span id="gaugeDelay">
+                            18
+                        </span>
+                        <small>mins</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <h3 class="green-text">
+                Moderate delay
+            </h3>
+
+            <p>
+                Train is currently running according
+                to the planned schedule.
+            </p>
+
+
+            <div class="ai-message">
+
+                <strong>
+                    ✨ AI Analysis
+                </strong>
+
+                <p>
+                    Good weather, smooth railway traffic
+                    and optimal route conditions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= TRAIN DETAILS ================= -->
+
+        <div class="panel train-details" id="details">
+
+            <h2>📋 Train Details</h2>
+
+
+            <div class="detail-row">
+                <span>Train Number</span>
+                <strong id="detailNumber">12727</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Train Name</span>
+                <strong id="detailName">Godavari Express</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Train Type</span>
+                <strong>Superfast Express</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>From</span>
+                <strong>Visakhapatnam</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>To</span>
+                <strong>Hyderabad</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Total Distance</span>
+                <strong>720 km</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Total Duration</span>
+                <strong>10h </strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Coach Position</span>
+                <strong>B2</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Running Days</span>
+                <strong>All Days</strong>
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= WEATHER ================= -->
+
+        <div class="panel weather-panel">
+
+            <h2>🌤️ Weather</h2>
+
+            <div class="weather-main">
+
+                <span>
+                    ☀️
+                </span>
+
+                <div>
+                    <strong>32°C</strong>
+                    <p>Partly Cloudy</p>
+                </div>
+
+            </div>
+
+            <p class="weather-info">
+                Humidity: 48%
+                <br>
+                Wind Speed: 12 km/h
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= COACH ================= -->
+
+        <div class="panel coach-panel">
+
+            <h2>🚃 Coach Position</h2>
+
+            <div class="coaches">
+
+                <span>Engine</span>
+                <span>B1</span>
+
+                <span class="selected-coach">
+                    B2
+                </span>
+
+                <span>B3</span>
+                <span>S1</span>
+                <span>S2</span>
+
+            </div>
+
+            <p>
+                You are currently in
+                <strong>B2</strong>
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <h3>SMART ETA 🚆</h3>
+
+    <p>
+        Dynamic Railway ETA Forecasting System
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
